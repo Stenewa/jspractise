@@ -140,3 +140,38 @@ return typesAnimals;
 }
 updateInfo("wild","carnivores","hyenas");
 //updateInfo("pets"," ","guinea pig")
+//accessing obj data
+var objDta=[
+	{
+		"fname":"poodles",
+		"species":"cat",
+		"yearofrescue":"2022",
+		"likes":["bananas","cuddles","naps"]
+	},
+	{
+		"fname":"barry",
+		"species":"dog",
+		"yearofrescue":"2020",
+		"likes":["walks","pets","treats"]
+	},
+	{
+		
+		"fname":"poo",
+		"species":"cat",
+		"yearofrescue":"2022",
+		"likes":["bananas","cuddles","naps"]
+	}
+];
+function lookup(name,property){
+for(var i=0; i<objDta.length;i++){
+	if (objDta[i].fname===name){
+		return objDta[i][property] ||"no such property";} 
+		
+};
+{
+	return "no such contact";
+}
+}
+	
+ var data=lookup("pooppy","likes");
+console.log(data);
